@@ -86,7 +86,7 @@ export const Weatherdata = () => {
       {weatherdata === "" ? null : weatherdata ? (
         <div>
           <div className=" text-9xl m-4">{weatherdata.icon}</div>
-          <p className="text-5xl mb-2 "> {weatherdata.temp}</p>
+          <p className="text-5xl mb-2 "> {weatherdata.temp}°C</p>
           <p className="text-3xl  mb-2 ">{weatherdata.location}</p>
           <div className=" flex justify-center gap-6 p-2">
             <div className="border border-white/50 py-2 px-3 rounded-xl">
