@@ -61,7 +61,7 @@ export const Weatherdata = () => {
   return (
     <div
       className=" my-10 sm:my-20 bg-gray-800  min-h-[200px] text-center mx-auto p-8 sm:rounded-2xl
-    w-90% max-w-md text-white"
+    sm:w-lg  text-white"
     >
       <div className="">
         <input
@@ -73,32 +73,32 @@ export const Weatherdata = () => {
               serch(user.current.value);
             }
           }}
-          className="bg-white rounded-2xl h-6 mx-5 px-4 text-black"
+          className="bg-white rounded-2xl h-8 mx-3 sm:mx-5 px-4 text-black"
         />
 
         <button
           onClick={() => serch(user.current.value)}
-          className="border border-white/30 px-2 py-1 rounded-2xl bg-blue-300"
+          className="border border-white/30 h-8 px-3 rounded-2xl bg-blue-300"
         >
           🔍
         </button>
       </div>
       {weatherdata === "" ? null : weatherdata ? (
         <div>
-          <div className=" text-9xl m-4">{weatherdata.icon}</div>
+          <div className=" text-9xl">{weatherdata.icon}</div>
           <p className="text-5xl mb-2 "> {weatherdata.temp}°C</p>
-          <p className="text-3xl  mb-2 ">{weatherdata.location}</p>
-          <div className=" flex justify-center gap-6 p-2">
+          <p className="text-5xl  mb-2 ">{weatherdata.location}</p>
+          <div className=" flex justify-center gap-6 p-2 text-xl">
             <div className="border border-white/50 py-2 px-3 rounded-xl">
               <p>{weatherdata.humidity}</p> <span>Humidity</span>
             </div>
-            <div className="border border-white/50 py-2 px-3 rounded-xl">
+            <div className="border border-white/50 py-2 px-3 rounded-xl ">
               <p>{weatherdata.windspeed} km/h</p> <span>Wind Speed</span>
             </div>
           </div>
         </div>
       ) : (
-        <div className="text-red-600 font-bold text-4xl">{errormsg}</div>
+        <div className="text-red-600 font-bold mt-5 text-4xl">{errormsg}</div>
       )}
     </div>
   );

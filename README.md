@@ -1,3 +1,2 @@
- Weather finder
- - show icon based on the waather code fecthed.
- - winds speed and humidity
+ - Weather finder
+A simple that lets users find the weather of different states. and users can press "Enter" or click the 🔍 button.
