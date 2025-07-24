@@ -19,7 +19,7 @@ export const Weatherdata = () => {
 
       const data = await fetch(API);
       const response = await data.json();
-      
+
       setWeatherdata({
         humidity: response.main.humidity,
         windspeed: response.wind.speed,
@@ -63,7 +63,7 @@ export const Weatherdata = () => {
       className=" my-10 sm:my-20 bg-gray-800  min-h-[200px] text-center mx-auto p-8 sm:rounded-2xl
     sm:w-lg  text-white"
     >
-      <div className="">
+      <div className="flex justify-center gap-3 sm:gap-4">
         <input
           type="text"
           placeholder="Type the name of city"
@@ -73,9 +73,8 @@ export const Weatherdata = () => {
               serch(user.current.value);
             }
           }}
-          className="bg-white rounded-2xl h-8 mx-3 sm:mx-5 px-4 text-black"
+          className="bg-white rounded-2xl h-8  px-4 text-black"
         />
-
         <button
           onClick={() => serch(user.current.value)}
           className="border border-white/30 h-8 px-3 rounded-2xl bg-blue-300"
